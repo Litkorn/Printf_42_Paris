@@ -52,10 +52,10 @@ int	ft_printf(const char *str, ...)
 	return (len);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	void	*str = '\0';
 	printf("%d\n", ft_printf("%p", str));
 	printf("%d\n", printf("%p", str));
 	return (1);
-}
+}*/
