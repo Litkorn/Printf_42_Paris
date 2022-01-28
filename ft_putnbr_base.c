@@ -35,9 +35,14 @@ void	ft_put_convert(char c, unsigned int nb, int *len)
 
 void	ft_put_pointer(intptr_t nb, int *len)
 {
-	write (1, "0x", 2);
-	(*len) = (*len) + 2;
-	ft_convert(nb, "0123456789abcdef", len, 16);
+	if (nb == 0)
+		(*len) =+ write(1, "(nil)", 5);
+	else
+	{
+		write (1, "0x", 2);
+		(*len) = (*len) + 2;
+		ft_convert(nb, "0123456789abcdef", len, 16);
+	}
 }
 
 void	ft_convert_dec(long long int nb, int *len)

@@ -19,7 +19,7 @@ static void	ft_conversion(va_list list_str, int *len, char c)
 	if (c == 's')
 		ft_put_str(va_arg(list_str, char *), len);
 	if (c == 'p')
-		ft_put_pointer(va_arg(list_str, intptr_t), len);
+		ft_put_pointer((intptr_t) va_arg(list_str, void*), len);
 	if (c == 'd' || c == 'i')
 		ft_convert_dec(va_arg(list_str, int), len);
 	if (c == 'x' || c == 'X' || c == 'u')
@@ -51,11 +51,11 @@ int	ft_printf(const char *str, ...)
 	va_end(list_str);
 	return (len);
 }
-/*
+
 int	main(void)
 {
-	char	*str = '\0';
-	printf("%d\n", ft_printf("ok%X%s%%\n", 2012, str));
-	printf("%d\n", printf("ok%X%s%%\n", 2012, str));
+	void	*str = '\0';
+	printf("%d\n", ft_printf("%p", str));
+	printf("%d\n", printf("%p", str));
 	return (1);
-}*/
+}
