@@ -15,7 +15,10 @@
 static void	ft_conversion(va_list list_str, int *len, char c)
 {
 	if (c == 'c')
-		ft_put_char(va_arg(list_str, int), len);
+	{
+		ft_put_char(va_arg(list_str, int));
+		(*len)++;
+	}
 	if (c == 's')
 		ft_put_str(va_arg(list_str, char *), len);
 	if (c == 'p')
@@ -45,17 +48,17 @@ int	ft_printf(const char *str, ...)
 			ft_conversion(list_str, &len, str[i]);
 		}
 		else
-			ft_put_char(str[i], &len);
+			len = len + ft_put_char(str[i]);
 		i++;
 	}
 	va_end(list_str);
 	return (len);
 }
 
-/*int	main(void)
+int	main(void)
 {
-	void	*str = '\0';
-	printf("%d\n", ft_printf("%p", str));
-	printf("%d\n", printf("%p", str));
+//	void	*str = '\0';
+	printf("%d\n", ft_printf("helloooooo%i%ukewr[wouejr[wojer[pwier]]] comment ca va?\n", 15, 15));
+	printf("%d\n", printf("helloooooo%i%ukewr[wouejr[wojer[pwier]]] comment ca va?\n", 15, 15));
 	return (1);
-}*/
+}

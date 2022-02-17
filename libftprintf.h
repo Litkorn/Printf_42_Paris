@@ -20,7 +20,7 @@
 
 typedef long long unsigned int	t_llui;
 
-void	ft_put_char(unsigned char c, int *len);
+int	ft_put_char(unsigned char c);
 void	ft_put_convert(char c, unsigned int nb, int *len);
 void	ft_convert_dec(long long int nb, int *len);
 void	ft_put_pointer(intptr_t nb, int *len);

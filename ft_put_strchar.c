@@ -12,9 +12,10 @@
 
 #include "libftprintf.h"
 
-void	ft_put_char(unsigned char c, int *len)
+int	ft_put_char(unsigned char c)
 {
-	(*len) = (*len) + write(1, &c, 1);
+	write(1, &c, 1);
+	return (1);
 }
 
 void	ft_put_str(char *str, int *len)
