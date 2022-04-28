@@ -6,7 +6,7 @@
 /*   By: cleibeng <cleibeng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 18:22:52 by cleibeng          #+#    #+#             */
-/*   Updated: 2022/01/21 18:22:52 by cleibeng         ###   ########.fr       */
+/*   Updated: 2022/04/26 13:56:09 by cleibeng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	ft_put_convert(char c, unsigned int nb, int *len)
 void	ft_put_pointer(intptr_t nb, int *len)
 {
 	if (nb == 0)
-		(*len) =+ write(1, "(nil)", 5);
+		(*len) += write(1, "(nil)", 5);
 	else
 	{
 		write (1, "0x", 2);

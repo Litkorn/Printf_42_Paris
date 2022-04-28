@@ -6,7 +6,7 @@
 /*   By: cleibeng <cleibeng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 14:56:09 by cleibeng          #+#    #+#             */
-/*   Updated: 2022/01/17 14:56:09 by cleibeng         ###   ########.fr       */
+/*   Updated: 2022/04/26 16:48:09 by cleibeng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static void	ft_conversion(va_list list_str, int *len, char c)
 	if (c == 's')
 		ft_put_str(va_arg(list_str, char *), len);
 	if (c == 'p')
-		ft_put_pointer((intptr_t) va_arg(list_str, void*), len);
+		ft_put_pointer((intptr_t) va_arg(list_str, void *), len);
 	if (c == 'd' || c == 'i')
 		ft_convert_dec(va_arg(list_str, int), len);
 	if (c == 'x' || c == 'X' || c == 'u')
@@ -53,12 +53,4 @@ int	ft_printf(const char *str, ...)
 	}
 	va_end(list_str);
 	return (len);
-}
-
-int	main(void)
-{
-//	void	*str = '\0';
-	printf("%d\n", ft_printf("helloooooo%i%ukewr[wouejr[wojer[pwier]]] comment ca va?\n", 15, 15));
-	printf("%d\n", printf("helloooooo%i%ukewr[wouejr[wojer[pwier]]] comment ca va?\n", 15, 15));
-	return (1);
 }

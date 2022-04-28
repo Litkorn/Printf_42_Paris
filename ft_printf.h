@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cleibeng <cleibeng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 18:24:20 by cleibeng          #+#    #+#             */
-/*   Updated: 2022/04/26 16:47:28 by cleibeng         ###   ########.fr       */
+/*   Updated: 2022/04/27 16:49:06 by cleibeng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 # include <stdio.h>
 # include <limits.h>
@@ -20,6 +20,7 @@
 
 typedef long long unsigned int	t_llui;
 
+int		ft_printf(const char *str, ...);
 int		ft_put_char(unsigned char c);
 void	ft_put_convert(char c, unsigned int nb, int *len);
 void	ft_convert_dec(long long int nb, int *len);
