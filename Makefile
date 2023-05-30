@@ -10,16 +10,17 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libftprintf.a
+NAME = ft_printf
 
 SRCS = ft_printf.c\
 	   ft_put_strchar.c\
 	   ft_putnbr_base.c\
 	   ft_strlen.c\
+	   test_file.c
 
 OBJS = ${SRCS:.c=.o}
 
-CC = gcc
+CC = cc
 FLAGS = -Wall -Wextra -Werror
 
 all:	${NAME}
@@ -28,8 +29,8 @@ all:	${NAME}
 	${CC} ${FLAGS} -g -c $< -o ${<:.c=.o}
 
 
-${NAME}:	${OBJS}
-		ar -rcs ${NAME} ${OBJS}
+${NAME}: ${OBJS}
+		${CC} -g ${OBJS} -o ${NAME}
 
 clean:
 		rm -f ${OBJS}

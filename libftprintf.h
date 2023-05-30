@@ -26,5 +26,6 @@ void	ft_convert_dec(long long int nb, int *len);
 void	ft_put_pointer(intptr_t nb, int *len);
 void	ft_put_str(char *str, int *len);
 size_t	ft_strlen(const char *s);
+int		ft_printf(const char *str, ...);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: cleibeng <cleibeng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 22:16:36 by cleibeng          #+#    #+#             */
-/*   Updated: 2023/05/30 22:44:52 by cleibeng         ###   ########.fr       */
+/*   Updated: 2023/05/30 22:50:23 by cleibeng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main(void){
 	char *s = "Ceci est un test";
 	char c = 'd';
-	void *p;
+	void *p = NULL;
 	int d = -42;
 
 	printf("test %%c\n\n");
